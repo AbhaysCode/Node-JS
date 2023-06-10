@@ -1,6 +1,7 @@
 const path = require('path');
 
 // BaseName
+console.log("__filename is ",__filename);
 console.log("BaseName is ",path.basename(__filename));
 
 // DirName
