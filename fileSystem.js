@@ -6,14 +6,14 @@ const fs = require('fs');
 //     console.log("Folder Created", path.join(__dirname, "test"));
 // })
 
-// fs.writeFile(path.join(__dirname, "test", "notes.txt"),"Learning fileSystem Module",(err)=>{
-//     if (err) throw err;
-//     console.log("File is Written ....");
-//     fs.appendFile(path.join(__dirname, "test", "notes.txt")," Appending File",(err)=>{
-//         if (err) throw err;
-//         console.log("File is Appended ....");
-//     })
-// })
+fs.writeFile(path.join(__dirname, "test", "notes.txt"),"Learning fileSystem Module",(err)=>{
+    if (err) throw err;
+    console.log("File is Written ....");
+    fs.appendFile(path.join(__dirname, "test", "notes.txt")," Appending File",(err)=>{
+        if (err) throw err;
+        console.log("File is Appended ....");
+    })
+})
 
 // Read File
 // fs.readFile(path.join(__dirname, "test","notes.txt"),'utf-8',(err,data)=>{
