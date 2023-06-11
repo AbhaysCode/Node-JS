@@ -8,12 +8,12 @@ const server = http.createServer((req,res)=>{
     console.log("Method is ",req.method);
     console.log("Header is ",req.headers);
     console.log("Ip Address is",ClientIp);
-    fs.readFile(path.join(__dirname,'public','index.html'),(err, data)=>{
-        if(err) throw err;
-        res.writeHead(200,{"Content-Type": "text/html"});
-        res.write(data);
-        res.end();
-    })
+    const data = {
+        "Ip Address":ClientIp
+    };
+    res.writeHead(200,{"Content-Type": "application/json"});
+    res.write(JSON.stringify(data));
+    res.end();
 })
 
 server.listen(3000,()=>{
