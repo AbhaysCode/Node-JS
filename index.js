@@ -9,6 +9,7 @@ const server = http.createServer((req,res)=>{
     console.log("Header is ",req.headers);
     console.log("Ip Address is",ClientIp);
     const data = {
+        "Headers": req.headers,
         "Ip Address":ClientIp
     };
     res.writeHead(200,{"Content-Type": "application/json"});
